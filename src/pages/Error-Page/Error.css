@@ -1,0 +1,51 @@
+/* Styles for the error container */
+.error-container {
+    gap: 30px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+    
+/* Styles for the error text section */
+.error-text {
+    gap: 5px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+/* Styles for heading level 1 in the error text */
+.error-text h1 {
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: normal;
+    text-transform: capitalize;
+}
+    
+/* Styles for heading level 2 in the error text */
+.error-text h2 {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: normal;
+    text-transform: capitalize;
+}
+
+/* Styles for the subtext in the error container */
+.error-subtext {
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+}
