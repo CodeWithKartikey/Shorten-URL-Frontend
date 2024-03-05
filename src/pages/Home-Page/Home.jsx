@@ -37,7 +37,7 @@ const Home = () => {
         }
   
         const data = await response.json();
-        const fullShortUrlLink = `http://localhost:5173/${data.shortUrlLink}`;
+        const fullShortUrlLink = `https://react-shorten-url-app.vercel.app/${data.shortUrlLink}`;
         setShortUrlLink(fullShortUrlLink);
         
         setLongUrlLink('');
