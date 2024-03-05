@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 // Import page components
 import Home from '../pages/Home-Page/Home.jsx';
-import Error from '../pages/Error-Page/Error.jsx';
+import Error from '../../public/Error-Page/Error.jsx';
 import ShortUrlRedirect from '../pages/Short-Url-Redirect-Page/ShortUrlRedirect.jsx';
 
 // Define PageRouter component responsible for routing within the application
