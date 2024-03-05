@@ -20,7 +20,7 @@ const PageRouter = () => {
     const checkShortUrl = async () => {
       try {
         // Make a request to the backend to check the short URL existence
-        const response = await fetch(`http://localhost:5000/api/v1/${shortUrlLink}`);
+        const response = await fetch(`https://shorten-url-backend-wwus.onrender.com/api/v1/${shortUrlLink}`);
         const data = await response.json();
         // Update state based on the response from the backend
         setShortUrlExists(data.success);
