@@ -15,7 +15,7 @@ const ShortUrlRedirect = () => {
     // Function to get the long url link from the database
     const fetchLongUrlLink = async () => {
       try {
-        const response = await fetch(`https://shorten-url-backend-wwus.onrender.com/api/v1/${shortUrlLink}`, {
+        const response = await fetch(`https://shorten-url-backend-kd1k.onrender.com/api/v1/${shortUrlLink}`, {
           method: 'GET',
           mode: 'cors',
           headers: {

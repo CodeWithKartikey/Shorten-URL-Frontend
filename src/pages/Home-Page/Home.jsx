@@ -23,7 +23,7 @@ const Home = () => {
   const generateShortUrlLink = async () => {
     if(longUrlLink.length > 0) {
       try {
-        const response = await fetch('https://shorten-url-backend-wwus.onrender.com/api/v1/shorten-url-link', {
+        const response = await fetch('https://shorten-url-backend-kd1k.onrender.com/api/v1/shorten-url-link', {
           method: 'POST',
           mode: 'cors',
           headers: {
