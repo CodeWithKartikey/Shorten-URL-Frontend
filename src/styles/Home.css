@@ -1,3 +1,6 @@
+/* 
+    Styles for the shorten-url container 
+*/
 .shorten-url {
     gap: 30px;
     width: 100%;
@@ -9,6 +12,9 @@
     background-color: white;
 }
 
+/* 
+    Styles for heading level 1 
+*/
 .shorten-url h1 {
     color: black;
     font-size: 30px;
@@ -19,9 +25,13 @@
     text-decoration: underline;
 }
 
+/* 
+    Styles for the long-url-link container 
+*/
 .long-url-link-container {
     gap: 20px;
-    width: 50vw;
+    width: 80%;
+    max-width: 600px; /* Limit container width for smaller screens */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -33,23 +43,32 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* 
+    Styles for the input form within the container 
+*/
 .long-url-link-form {
     gap: 10px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+/* 
+    Styles for labels within the input form 
+*/
 .long-url-link-form label {
     color: black;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     word-spacing: normal;
     letter-spacing: normal;
     text-transform: capitalize;
 }
 
+/* 
+    Styles for text inputs within the input form 
+*/
 .long-url-link-form input[type="text"] {
     width: 100%;
     height: auto;
@@ -63,40 +82,29 @@
     transition: border-color 0.3s ease-in-out;
 }
 
+/* 
+    Styles for focused text inputs 
+*/
 input[type="text"]:focus{
     border-color: black;
 }
 
+/* 
+    Styles for the buttons container 
+*/
 .btn {
-    width: 75%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.input-btn {
-    width: 30%;
-    height: auto;
-    padding: 10px 15px;
-    font-size: 18px;
-    font-weight: normal;
-    word-spacing: normal;
-    letter-spacing: normal;
-    border-radius: 2px;
-    border: 1px solid black;
-    color: white;
-    background-color: black;
-    transition: all 0.3s ease-in-out;
-}
-
-.input-btn:hover {
-    color: black;
-    background-color: #B1AEAE;
-    border: 1px solid #B1AEAE;
-}
-
+/* 
+    Styles for the generate and reset slug button 
+*/
+.input-btn,
 .reset-btn {
-    width: 30%;
+    width: 45%;
     height: auto;
     padding: 10px 15px;
     font-size: 18px;
@@ -110,17 +118,27 @@ input[type="text"]:focus{
     transition: all 0.3s ease-in-out;
 }
 
+/* 
+    Styles for hover effect on the buttons 
+*/
+.input-btn:hover,
 .reset-btn:hover {
     color: black;
     background-color: #B1AEAE;
     border: 1px solid #B1AEAE;
 }
 
+/* 
+    Styles for the separator line 
+*/
 .line {
-    width: 100vw;
+    width: 100%;
     border: 1px solid black;
 }
 
+/* 
+    Styles for heading level 3 - named display
+*/
 .display {
     color: black;
     font-size: 20px;
@@ -131,13 +149,19 @@ input[type="text"]:focus{
     text-decoration: underline;
 }
 
+/* 
+    Styles for the short-url-link from
+*/
 .short-url-link-form {
     gap: 10px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
+/* 
+    Styles for labels within the short-url-link
+*/
 .short-url-link-form label {
     color: black;
     font-size: 20px;
@@ -147,10 +171,16 @@ input[type="text"]:focus{
     text-transform: capitalize;
 }
 
+/* 
+    Styles for the short-url-link container 
+*/
 .short-url-link-form-container {
     display: flex;
 }
 
+/* 
+    Styles for the short-url-link container text input 
+*/
 .short-url-link-form-container input[type="text"] {
     width: 100%;
     height: auto;
@@ -164,12 +194,18 @@ input[type="text"]:focus{
     transition: border-color 0.3s ease-in-out;
 }
 
+/* 
+    Styles for focused short-url-link container text input  
+*/
 .short-url-link-form-container input[type="text"]:focus{
     border-color: black;
 }
 
+/* 
+    Styles for the copy button 
+*/
 .output-btn {
-    width: 25%;
+    width: 120px; /* Adjust width as needed */
     height: auto;
     padding: 10px 15px;
     font-size: 18px;
@@ -183,8 +219,60 @@ input[type="text"]:focus{
     transition: all 0.3s ease-in-out;
 }
 
+/* 
+    Styles for hover effect on the copy button 
+*/
 .output-btn:hover {
     color: black;
     background-color: #B1AEAE;
     border: 1px solid #B1AEAE;
+}
+
+/* 
+    Media queries for responsiveness 
+*/
+@media screen and (max-width: 768px) {
+    /* For tablet screens */
+    .long-url-link-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile screens */
+    .shorten-url {
+        gap: 20px;
+    }
+    
+    .shorten-url h1 {
+        font-size: 25px;
+    }
+
+    .display {
+        font-size: 10px;
+    }
+
+    .long-url-link-container {
+        width: 95%;
+    }
+
+    .long-url-link-form label,
+    .short-url-link-form label {
+        font-size: 20px;
+    }
+
+    .long-url-link-form input[type="text"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    .input-btn,
+    .reset-btn,
+    .output-btn {
+        font-size: 14px;
+    }
 }

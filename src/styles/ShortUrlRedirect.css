@@ -1,0 +1,44 @@
+/* 
+    Styles for the container of the ShortUrlRedirect component 
+*/
+.short-url-redirect {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+/* 
+    Styles for the heading element within the ShortUrlRedirect component 
+*/
+.short-url-redirect h1 {
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: normal;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+/* 
+    Media queries for responsiveness  
+*/
+@media screen and (max-width: 768px) {
+    /* For tablet screens */
+    .short-url-redirect h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile screens */
+    .short-url-redirect h1 {
+        font-size: 20px;
+    }
+}
+
+

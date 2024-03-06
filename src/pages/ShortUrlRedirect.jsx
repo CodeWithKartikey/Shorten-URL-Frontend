@@ -3,10 +3,13 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 // Importing styles
-import './ShortUrlRedirect.css';
+import '../styles/ShortUrlRedirect.css';
 
 // Component for redirecting short URLs to long URLs
 const ShortUrlRedirect = () => {
+
+  // API base URL for fetching GET requests
+  const getUrl = import.meta.env.VITE_API_BASE_URL;
   
   // Extracting short URL link from the URL parameters
   const { shortUrlLink } = useParams();
@@ -15,7 +18,7 @@ const ShortUrlRedirect = () => {
     // Function to get the long url link from the database
     const fetchLongUrlLink = async () => {
       try {
-        const response = await fetch(`https://shorten-url-backend-kd1k.onrender.com/api/v1/${shortUrlLink}`, {
+        const response = await fetch(`${getUrl}${shortUrlLink}`, {
           method: 'GET',
           mode: 'cors',
           headers: {
@@ -29,13 +32,13 @@ const ShortUrlRedirect = () => {
           window.location.href = data.longUrlLink;
         } else if (response.status === 404) {
           // If short URL is not found, handle the error
-          console.log('Short URL link not found');
+          console.log('Short URL link not found.');
         } else {
           // Handle other errors
-          console.error('Error:', response.statusText);
+          console.error('Error :', response.statusText);
         }
       } catch (error) {
-        console.error('Error:', error.message);
+        console.error('Error :', error.message);
       }
     };
     // Call the fetchLongUrlLink method

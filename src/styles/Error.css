@@ -1,4 +1,6 @@
-/* Styles for the error container */
+/* 
+    Styles for the error container 
+*/
 .error-container {
     gap: 30px;
     width: 100%;
@@ -9,18 +11,22 @@
     justify-content: center;
     background-color: white;
 }
-    
-/* Styles for the error text section */
+
+/* 
+    Styles for the error text section 
+*/
 .error-text {
     gap: 5px;
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-    
-/* Styles for heading level 1 in the error text */
+
+/* 
+    Styles for heading level 1 in the error text 
+*/
 .error-text h1 {
     color: black;
     font-size: 30px;
@@ -29,8 +35,10 @@
     word-spacing: normal;
     text-transform: capitalize;
 }
-    
-/* Styles for heading level 2 in the error text */
+
+/* 
+    Styles for heading level 2 in the error text 
+*/
 .error-text h2 {
     color: black;
     font-size: 20px;
@@ -40,7 +48,9 @@
     text-transform: capitalize;
 }
 
-/* Styles for the subtext in the error container */
+/* 
+    Styles for the subtext in the error container 
+*/
 .error-subtext {
     color: black;
     font-size: 15px;
@@ -48,4 +58,27 @@
     word-spacing: normal;
     letter-spacing: normal;
     text-transform: capitalize;
+}
+
+/* 
+    Media queries for responsiveness 
+*/
+@media screen and (max-width: 768px) {
+    /* For tablet screens */
+    .error-text h1 {
+        font-size: 24px;
+    }
+    .error-text h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile screens */
+    .error-text h1 {
+        font-size: 20px;
+    }
+    .error-text h2 {
+        font-size: 16px;
+    }
 }

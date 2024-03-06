@@ -2,10 +2,15 @@
 import React, { useState, useRef, useCallback } from 'react';
 
 // Importing styles
-import './Home.css';
+import '../styles/Home.css';
 
 // Define a functional component named Home
 const Home = () => {
+
+  // API base URL for fetching
+  const postUrl = import.meta.env.VITE_API_BASE_URL;
+  // Frontend base URL
+  const frontEndUrl = import.meta.env.VITE_FRONTEND_URL;
 
   // State variables for managing long url link and generated short url link
   const [longUrlLink, setLongUrlLink] = useState(''); 
@@ -23,7 +28,7 @@ const Home = () => {
   const generateShortUrlLink = async () => {
     if(longUrlLink.length > 0) {
       try {
-        const response = await fetch('https://shorten-url-backend-kd1k.onrender.com/api/v1/shorten-url-link', {
+        const response = await fetch(`${postUrl}`, {
           method: 'POST',
           mode: 'cors',
           headers: {
@@ -37,7 +42,7 @@ const Home = () => {
         }
   
         const data = await response.json();
-        const fullShortUrlLink = `https://react-shorten-url-app.vercel.app/${data.shortUrlLink}`;
+        const fullShortUrlLink = `${frontEndUrl}${data.shortUrlLink}`;
         setShortUrlLink(fullShortUrlLink);
         
         setLongUrlLink('');

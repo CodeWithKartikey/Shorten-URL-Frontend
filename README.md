@@ -20,7 +20,7 @@ Shorten URL App is a frontend web application built using React.js. It allows us
    ```
 2. Navigate to the frontend directory:
    ```bash
-   cd shorten-url-app/frontend
+   cd <file-name>
    ```
 3. Install dependencies:
    ```bash

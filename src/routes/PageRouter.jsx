@@ -3,12 +3,16 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Import page components
-import Home from '../pages/Home-Page/Home.jsx';
-import Error from '../../public/Error-Page/Error.jsx';
-import ShortUrlRedirect from '../pages/Short-Url-Redirect-Page/ShortUrlRedirect.jsx';
+import Home from '../pages/Home.jsx';
+import Error from '../pages/Error.jsx';
+import ShortUrlRedirect from '../pages/ShortUrlRedirect.jsx';
 
 // Define PageRouter component responsible for routing within the application
 const PageRouter = () => {
+
+  // API base URL for fetching GET requests
+  const pageUrl = import.meta.env.VITE_API_BASE_URL;
+
   // State to track if the short URL exists
   const [shortUrlExists, setShortUrlExists] = useState(false);
 
@@ -20,7 +24,7 @@ const PageRouter = () => {
     const checkShortUrl = async () => {
       try {
         // Make a request to the backend to check the short URL existence
-        const response = await fetch(`https://shorten-url-backend-kd1k.onrender.com/api/v1/${shortUrlLink}`);
+        const response = await fetch(`${pageUrl}${shortUrlLink}`);
         const data = await response.json();
         // Update state based on the response from the backend
         setShortUrlExists(data.success);
