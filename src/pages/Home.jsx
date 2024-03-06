@@ -8,7 +8,7 @@ import '../styles/Home.css';
 const Home = () => {
 
   // API base URL for fetching POST requests
-  const postUrl = import.meta.env.VITE_API_POST_Request;
+  const postUrl = import.meta.env.VITE_API_POST_REQUEST;
   // Frontend base URL
   const frontEndUrl = import.meta.env.VITE_FRONTEND_URL;
 
