@@ -7,8 +7,8 @@ import '../styles/Home.css';
 // Define a functional component named Home
 const Home = () => {
 
-  // API base URL for fetching
-  const postUrl = import.meta.env.VITE_API_BASE_URL;
+  // API base URL for fetching POST requests
+  const postUrl = import.meta.env.VITE_API_POST_Request;
   // Frontend base URL
   const frontEndUrl = import.meta.env.VITE_FRONTEND_URL;
 
